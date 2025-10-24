@@ -22,18 +22,21 @@ def findDiagonalOrder(mat):
             
             # check if the colum index is within the limits of the matrix
             if 0 <= j < col:
-                temp.append(mat[j][i])
+                temp.append(mat[i][j])
         
         # odd diagonals reverse ** optional
-        """ if diagonal % 2 == 0:
-            temp.reverse() """
+        if diagonal % 2 == 0:
+            print("reversing")
+            print(temp)
+            temp.reverse()
+            print(temp)
 
         result.extend(temp)
     print(result)
     return result
 
 
-mat = [[1,2,3],
-       [4,5,6],
-       [7,8,9]]
+mat = [[1,2,3,4],
+       [4,5,6,7],
+       [7,8,9,10]]
 findDiagonalOrder(mat)
